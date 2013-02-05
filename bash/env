@@ -1,0 +1,39 @@
+export EDITOR="mvim -f"
+export SVN_EDITOR=vim
+export JAVA_OPTS="-XX:PermSize=128m -XX:MaxPermSize=384m -XX:NewSize=256m -Xmx1024m"
+export GRAILS_OPTS="-Xmx1G -Xms256m -XX:MaxPermSize=256m"
+
+### Groovy
+GROOVY_HOME=/usr/local/groovy
+PATH=$PATH:$GROOVY_HOME/bin
+export GROOVY_HOME PATH
+
+## Grails
+GRAILS_HOME=/usr/local/grails
+PATH=$PATH:$GRAILS_HOME/bin
+export GRAILS_HOME PATH
+
+### MySql
+MYSQL_HOME=/usr/local/mysql
+PATH=$PATH:$MYSQL_HOME/bin
+export MYSQL_HOME PATH
+
+### Tomcat
+export CATILINA_HOME=/usr/local/tomcat
+export JAVA_HOME=/Library/Java/Home
+
+### Gradle
+export GRADLE_HOME=/usr/local/gradle
+PATH=$PATH:$GRADLE_HOME/bin
+export GRADLE_HOME PATH
+
+### JAVA JARS
+export LIB_HOME=~/work/lib
+PATH=$PATH:$LIB_HOME
+export LIB_HOME PATH
+
+## PYTHON
+export PYTHON_HOME=~/usr/local/share/python
+PATH=$PATH:$PYTHON_HOME
+export PYTHON_HOME PATH
+

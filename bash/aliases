@@ -1,0 +1,68 @@
+alias reload='source ~/bin/dotfiles/bashrc'
+alias ealias='mvim ~/bin/dotfiles/bash/aliases'
+alias reloadalias='source ~/bin/dotfiles/bash/aliases'
+alias eenv='mvim ~/bin/dotfiles/bash/env'
+
+alias k9="kill -9"
+alias ggg="echo ggg to line"
+
+alias gta="grails test-app"
+alias gtu="grails test-app unit:"
+alias gti="grails test-app integration:"
+alias vi="mvim -v"
+alias vim="mvim -v"
+alias gdra="grails-debug run-app"
+alias gdta="grails-debug test-app"
+alias gra="grails run-app"
+alias gcdc="grails create-domain-class"
+alias ll="ls -l"
+alias la="ls -al"
+alias server="python -m SimpleHTTPServer"
+alias b='pushd +1'
+alias f='pushd -0'
+alias goto_it='ssh zthrash@it.int.objectpartners.com'
+alias sqlprofiler='java -jar ~/work/sqlprofiler-0.3-bin/sqlprofiler.jar'
+alias jur='open target/test-reports/html/index.html'
+
+
+alias msgmove='cp ~/.grails/2.1.0/projects/mobile-application/tomcat/work/Tomcat/localhost/_/jawrTmp/text/i18n/messages.js ~/work/virtuwell/mobile-application/web-app/js/i18n/'
+
+
+alias stash='git stash'
+alias unstash='git stash pop'
+
+#alias ..="pushd .."
+#alias ...="pushd ../.."
+
+alias vw="pushd ~/work/virtuwell"
+alias buyer="pushd ~/work/dealcurious/buyer-curious"
+
+function switchGrails() {
+    echo "Switching to grails version: $1"
+    sudo rm /usr/local/grails
+    sudo ln -s /usr/local/$1 /usr/local/grails
+    echo "Done!"
+    ls -latr /usr/local/grails
+}
+
+alias g137='switchGrails "grails-1.3.7"'
+alias g200='switchGrails "grails-2.0.0"'
+alias g203='switchGrails "grails-2.0.3"'
+alias g200M2='switchGrails "grails-2.0.0.M2"'
+alias g210='switchGrails "grails-2.1.0"'
+alias g211='switchGrails "grails-2.1.1"'
+
+function take() {
+    mkdir -p "$1"
+    cd "$1"
+}
+
+#projects
+alias devnet='cd ~/work/devnet && gvm use grails 2.1.1'
+alias vwreports='vw && cd reports-application && gvm use grails 2.1.0'
+alias vwmobile='vw && cd mobile-application && gvm use grails 2.1.0'
+alias vwprovider='vw && cd provider-application && gvm use grails 1.3.7'
+alias vwpatient='vw && cd patient-application && gvm use grails 1.3.7'
+alias vwstm='vw && cd scheule-task-manager && gvm use grails 1.3.7'
+
+

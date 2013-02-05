@@ -1,0 +1,5 @@
+source ~/bin/dotfiles/bashrc
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/zanthrash/.gvm/bin/gvm-init.sh" ]] && source "/Users/zanthrash/.gvm/bin/gvm-init.sh"
+[[ -s /Users/zanthrash/.nvm/nvm.sh ]] && . /Users/zanthrash/.nvm/nvm.sh # This loads NVM
