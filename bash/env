@@ -1,7 +1,11 @@
 export EDITOR="mvim -f"
 export SVN_EDITOR=vim
-export JAVA_OPTS="-XX:PermSize=128m -XX:MaxPermSize=384m -XX:NewSize=256m -Xmx1024m"
-export GRAILS_OPTS="-Xmx1G -Xms256m -XX:MaxPermSize=256m"
+export JAVA_OPTS="-Dcom.sun.management.jmxremote"
+export JAVA_OPTS="$JAVA_OPTS -Djava.rmi.server.hostname=localhost"
+export JAVA_OPTS="$JAVA_OPTS -XX:MaxPermSize=384m -Xms256m -Xmx2048m"
+export GRAILS_OPTS="-server -Xmx1G -Xms256m -XX:MaxPermSize=256m"
+
+export PATH="/usr/local/bin:$PATH"
 
 ### Groovy
 GROOVY_HOME=/usr/local/groovy
@@ -20,7 +24,6 @@ export MYSQL_HOME PATH
 
 ### Tomcat
 export CATILINA_HOME=/usr/local/tomcat
-export JAVA_HOME=/Library/Java/Home
 
 ### Gradle
 export GRADLE_HOME=/usr/local/gradle
@@ -33,7 +36,22 @@ PATH=$PATH:$LIB_HOME
 export LIB_HOME PATH
 
 ## PYTHON
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
 export PYTHON_HOME=~/usr/local/share/python
 PATH=$PATH:$PYTHON_HOME
 export PYTHON_HOME PATH
 
+# JMETER
+export JMETER_HOME=/usr/local/lib/jmeter
+PATH=$PATH:$JMETER_HOME/bin
+export JMETER_HOME PATH
+
+#last JDK 6 by Apple
+export JAVA_6_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+#latest JDK 7 by Oracle
+export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_13.jdk/Contents/Home
+#latest preview JDK 8 by Oracle
+export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home
+
+#default JDK is  7
+export JAVA_HOME=$JAVA_7_HOME
