@@ -13,7 +13,7 @@ alias gdiff="git diff"
 alias prodtools1="ssh zach@vwprodtools01.mn5.visi.com"
 alias tools1="ssh zach@vwtools01.mn5.visi.com"
 alias tools2="ssh zach@vwtools02.mn5.visi.com"
-alias synology="ssh admin@legein.synology.me"
+alias synology="ssh root@legein.synology.me"
 alias amq="/usr/local/lib/activemq/bin/activemq start"
 
 alias gta="grails test-app"
